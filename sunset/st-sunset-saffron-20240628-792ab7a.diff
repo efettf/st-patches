@@ -1,0 +1,87 @@
+From 792ab7a4bb1146a3188587adf683d7a56c539bcf Mon Sep 17 00:00:00 2001
+From: elbachir-one <bachiralfa@gmail.com>
+Date: Fri, 28 Jun 2024 01:17:41 +0100
+Subject: [PATCH] Saffron color scheme (Sunset)
+
+---
+ config.def.h | 58 +++++++++++++++++++++++-----------------------------
+ 1 file changed, 26 insertions(+), 32 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 2cd740a..7225d41 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -95,44 +95,38 @@ unsigned int tabspaces = 8;
+ 
+ /* Terminal colors (16 first used in escape sequence) */
+ static const char *colorname[] = {
+-	/* 8 normal colors */
+-	"black",
+-	"red3",
+-	"green3",
+-	"yellow3",
+-	"blue2",
+-	"magenta3",
+-	"cyan3",
+-	"gray90",
+-
+-	/* 8 bright colors */
+-	"gray50",
+-	"red",
+-	"green",
+-	"yellow",
+-	"#5c5cff",
+-	"magenta",
+-	"cyan",
+-	"white",
+-
+-	[255] = 0,
+-
+-	/* more colors can be added after 255 to use with DefaultXX */
+-	"#cccccc",
+-	"#555555",
+-	"gray90", /* default foreground colour */
+-	"black", /* default background colour */
++    "#1d2021",
++    "#fbf1c7",
++    "#fe8019",
++    "#8ec07c",
++    "#d3869b",
++    "#fabd2f",
++    "#83a598",
++    "#fe8019",
++    "#1d2021",
++    "#282828",
++    "#3c3836",
++    "#928374",
++    "#504945",
++    "#665c54",
++    "#7c6f64",
++    "#a89984",
++
++    [255] = 0,
++
++    "#fabd2f",
++    "#fe8019",
++    "#000000",
++    "#fbf1c7",
+ };
+-
+-
+ /*
+  * Default colors (colorname index)
+  * foreground, background, cursor, reverse cursor
+  */
+-unsigned int defaultfg = 258;
+-unsigned int defaultbg = 259;
++unsigned int defaultfg = 259;
++unsigned int defaultbg = 258;
+ unsigned int defaultcs = 256;
+-static unsigned int defaultrcs = 257;
++unsigned int defaultrcs = 257;
+ 
+ /*
+  * Default shape of cursor
+-- 
+2.45.2
+
