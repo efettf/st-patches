@@ -22,12 +22,12 @@ index 039c42c..a0cb4fd 100644
 +++ b/config.mk
 @@ -14,7 +14,7 @@ X11LIB = /usr/X11R6/lib
  INCS = -I$(X11INC) \
-        `pkg-config --cflags fontconfig` \
-        `pkg-config --cflags freetype2`
+        `$(PKG_CONFIG) --cflags fontconfig` \
+        `$(PKG_CONFIG) --cflags freetype2`
 -LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft \
 +LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXcursor \
-        `pkg-config --libs fontconfig` \
-        `pkg-config --libs freetype2`
+        `$(PKG_CONFIG) --libs fontconfig` \
+        `$(PKG_CONFIG) --libs freetype2`
  
 diff --git a/x.c b/x.c
 index c343ba2..5a7461e 100644
